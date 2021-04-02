@@ -5,13 +5,13 @@
         <v-app-bar-nav-icon v-if="logged" @click="toggleMenu" />
 
         <div class="nav-bar__logo">
-          <h4>Portões do Eden</h4>
+          <v-btn :to="'/'" text>Portões do Eden</v-btn>
         </div>
       </div>
 
       <v-spacer></v-spacer>
 
-      <div class="area-login">
+      <div class="area-login" v-if="$route.name != 'Login'">
         <div class="area-login__icon">
           <v-icon>mdi-account</v-icon>
         </div>
@@ -147,5 +147,9 @@ p.tooltip-paragrafo {
 .login-tooltip__btn,
 .login-tooltip__titulo {
   margin: 1rem;
+}
+.theme--dark.v-btn--active:hover::before,
+.theme--dark.v-btn--active::before {
+  opacity: 0;
 }
 </style>
