@@ -1,8 +1,12 @@
-import { requestAxios } from "../../server/axios";
-
 export default {
-    state: {},
-    mutations: {},
-    actions: {},
-    getters: {},
-}
+  state: {
+    login: false,
+  },
+  mutations: {},
+  actions: {},
+  getters: {
+    logged(state) {
+      return state.login;
+    },
+  },
+};
