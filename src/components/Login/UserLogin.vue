@@ -26,10 +26,11 @@ export default {
 
 <style scoped>
 .login {
+  align-items: center;
+  align-content: center;
   display: flex;
   justify-content: center;
 }
-
 
 .subtitulo {
   font-family: elementary;
@@ -37,9 +38,12 @@ export default {
 .container {
   border-radius: 20px;
   padding: 1.5rem 3rem;
-  height: 42vh;
-  max-width: 50vh;
+  height: 48vh;
+  max-width: 60vh;
   background: white;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
   -webkit-box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);

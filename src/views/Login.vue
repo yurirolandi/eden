@@ -14,6 +14,7 @@ export default {
 .login {
   background-image: url("../assets/img/backsite.png");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
 }
 </style>

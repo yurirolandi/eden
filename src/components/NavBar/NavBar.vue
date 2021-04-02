@@ -1,45 +1,31 @@
 <template>
   <div class="navbar">
-    <v-app-bar app  >
+    <v-app-bar app color="white">
       <div class="d-flex align-center">
         <v-app-bar-nav-icon v-if="logged" @click="toggleMenu" />
 
-        <div class="nav-bar__logo">
+        <!-- <div class="nav-bar__logo">
           <v-btn :to="'/'" text>Portões do Eden</v-btn>
-        </div>
+        </div> -->
       </div>
 
+      <div class="redondo">
+        <div class="logo">
+          <img
+            class="img-logo"
+            src="../../assets/img/bolinhadoyuri.png"
+            @click="home"
+            alt=""
+          />
+        </div>
+      </div>
       <v-spacer></v-spacer>
 
       <div
         class="area-login"
         v-if="$route.name !== 'Login' && $route.name !== 'CreateAccount'"
       >
-        <div class="area-login__icon">
-          <v-icon>mdi-account</v-icon>
-        </div>
-        <Tooltip>
-          <template v-slot:tooltip-title>
-            <p class="tooltip-paragrafo">
-              Ainda não tem login ? <br />
-              cadastre-se
-            </p>
-          </template>
-          <template v-slot:tooltip-content>
-            <div class="login-tooltip">
-              <div class="login-tooltip__titulo">
-                pra ver seus estudos e ter uma experiência personalizada, acesse
-                sua conta :)
-              </div>
-              <div class="login-tooltip__btn">
-                <v-btn :to="'/login'">Entrar</v-btn>
-              </div>
-              <div class="login-tooltip__cadastro">
-                <v-btn :to="'/create-account'" text>Cadastrar</v-btn>
-              </div>
-            </div>
-          </template>
-        </Tooltip>
+        <v-btn :to="'/login'" class="btn">Login</v-btn>
       </div>
     </v-app-bar>
 
@@ -98,11 +84,9 @@
 
 <script>
 import { mapGetters } from "vuex";
-import Tooltip from "../shared/Tooltip";
 
 export default {
   name: "NavBar",
-  components: { Tooltip },
   data() {
     return {
       items: [
@@ -119,6 +103,11 @@ export default {
     },
     logout() {
       console.log("deslogando");
+    },
+    home() {
+      if (this.$route.path !== '/') {
+        this.$router.push("/");
+      }
     },
   },
   computed: {
@@ -156,5 +145,18 @@ p.tooltip-paragrafo {
 .theme--dark.v-btn--active:hover::before,
 .theme--dark.v-btn--active::before {
   opacity: 0;
+}
+.redondo {
+  width: 100%;
+}
+.logo {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  cursor: pointer;
+}
+.img-logo {
+  width: 200px;
+  height: 150px;
 }
 </style>

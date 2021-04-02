@@ -13,7 +13,12 @@ export default {
 <style scoped>
 .create-login {
   background-image: url("../assets/img/backsite.png");
+  background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
