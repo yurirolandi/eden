@@ -1,9 +1,9 @@
 <template>
   <div class="tooltip">
     <slot name="tooltip-title"></slot>
-    <span class="tooltiptext">
+    <div class="tooltiptext">
       <slot name="tooltip-content"></slot>
-    </span>
+    </div>
   </div>
 </template>
 
@@ -22,26 +22,25 @@ export default {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 350px;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
-  top: 150%;
-  left: 50%;
-  margin-left: -60px;
+  top: 110%;
+  left: -130%;
 }
 
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
   bottom: 100%;
-  left: 50%;
+  left: 80%;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 10px;
   border-style: solid;
   border-color: transparent transparent black transparent;
 }
