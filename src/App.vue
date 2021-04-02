@@ -35,4 +35,5 @@ export default {
   font-size: 1.6rem;
   font-family: elementary;
 }
+
 </style>
