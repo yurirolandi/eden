@@ -23,7 +23,7 @@ export default {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 350px;
-  background-color: black;
+  background-color: #272727;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -42,7 +42,7 @@ export default {
   margin-left: -5px;
   border-width: 10px;
   border-style: solid;
-  border-color: transparent transparent black transparent;
+  border-color: transparent transparent #272727 transparent;
 }
 
 .tooltip:hover .tooltiptext {
