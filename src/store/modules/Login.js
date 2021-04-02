@@ -1,6 +1,6 @@
 export default {
   state: {
-    login: false,
+    login: true,
   },
   mutations: {},
   actions: {},

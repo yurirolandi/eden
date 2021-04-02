@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app  >
       <div class="d-flex align-center">
         <v-app-bar-nav-icon v-if="logged" @click="toggleMenu" />
 

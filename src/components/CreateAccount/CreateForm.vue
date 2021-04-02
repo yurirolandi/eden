@@ -53,7 +53,7 @@
       required
     ></v-checkbox>
 
-    <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+    <v-btn :disabled="!valid" class="mr-4 btn" @click="validate">
       Enviar
     </v-btn>
   </v-form>
@@ -85,7 +85,7 @@ export default {
     ],
     select: null,
     selectReligiao: null,
-    sexo: ["Masculino", "Feminino", "Otros"],
+    sexo: ["Masculino", "Feminino", "Prefiro não dizer"],
     religiao: ["A", "B", "C"],
     checkbox: false,
   }),

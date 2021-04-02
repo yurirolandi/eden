@@ -19,14 +19,11 @@
       required
     ></v-text-field>
 
-    <v-btn
-      :disabled="!valid"
-      color="success"
-      class="mr-4 mt-3"
-      @click="validate"
-    >
-      Entrar
-    </v-btn>
+    <div class="auto">
+      <v-btn :disabled="!valid" class="mt-3 btn" @click="validate">
+        Entrar
+      </v-btn>
+    </div>
   </v-form>
 </template>
 
@@ -60,3 +57,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.auto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+</style>

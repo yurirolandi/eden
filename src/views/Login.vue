@@ -10,4 +10,10 @@ export default {
   components: { UserLogin },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.login {
+  background-image: url("../assets/img/backsite.png");
+  background-size: cover;
+  height: 100%;
+}
+</style>
