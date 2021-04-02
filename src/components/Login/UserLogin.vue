@@ -1,12 +1,14 @@
 <template>
   <div class="login">
     <div class="container lighten-5 mt-10">
-      <h2 class="mb-2 text-center">Criar conta</h2>
+      <h2 class="mb-2 text-center">Entrar</h2>
       <UserForm />
-      <p class="pa-1 mt-3">
-        Ao continuar com o acesso, você concorda com a nossa <br />
-        política de privacidade
-      </p>
+
+      <div class="mt-8">
+        <hr />
+        <p class="mt-4">Ainda não sou membro ?</p>
+        <v-btn :to="'/create-account'">Cadastrar</v-btn>
+      </div>
     </div>
   </div>
 </template>
@@ -30,5 +32,9 @@ export default {
   -webkit-box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
+}
+.theme--dark.v-btn--active:hover::before,
+.theme--dark.v-btn--active::before {
+  opacity: 0;
 }
 </style>
