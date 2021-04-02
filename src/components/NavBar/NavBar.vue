@@ -11,7 +11,10 @@
 
       <v-spacer></v-spacer>
 
-      <div class="area-login" v-if="$route.name != 'Login'">
+      <div
+        class="area-login"
+        v-if="$route.name !== 'Login' && $route.name !== 'CreateAccount'"
+      >
         <div class="area-login__icon">
           <v-icon>mdi-account</v-icon>
         </div>
@@ -31,7 +34,9 @@
               <div class="login-tooltip__btn">
                 <v-btn :to="'/login'">Entrar</v-btn>
               </div>
-              <div class="login-tooltip__cadastro">Cadastrar</div>
+              <div class="login-tooltip__cadastro">
+                <v-btn :to="'/create-account'" text>Cadastrar</v-btn>
+              </div>
             </div>
           </template>
         </Tooltip>
