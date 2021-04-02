@@ -21,9 +21,9 @@ const routes = [
     component: () => import("../views/Login.vue"),
   },
   {
-    path: '*',
-    name: 'NotFound',
-    component: () => import('../views/NotFound.vue'),
+    path: "*",
+    name: "NotFound",
+    component: () => import("../views/NotFound.vue"),
   },
 ];
 
