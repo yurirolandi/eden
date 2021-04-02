@@ -2,19 +2,40 @@
   <div class="navbar">
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
-        <v-app-bar-nav-icon @click="toggleMenu" />
+        <v-app-bar-nav-icon v-if="logged" @click="toggleMenu" />
+
+        <div class="nav-bar__logo">
+          <h4>Portões do Eden</h4>
+        </div>
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <div class="area-login">
+        <div class="area-login__icon">
+          <v-icon>mdi-account</v-icon>
+        </div>
+        <Tooltip>
+          <template v-slot:tooltip-title>
+            <p class="tooltip-paragrafo">
+              Ainda não tem login ? <br />
+              cadastre-se
+            </p>
+          </template>
+          <template v-slot:tooltip-content>
+            <div class="login-tooltip">
+              <div class="login-tooltip__titulo">
+                pra ver seus estudos e ter uma experiência personalizada, acesse
+                sua conta :)
+              </div>
+              <div class="login-tooltip__btn">
+                <v-btn :to="'/login'">Entrar</v-btn>
+              </div>
+              <div class="login-tooltip__cadastro">Cadastrar</div>
+            </div>
+          </template>
+        </Tooltip>
+      </div>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -69,9 +90,14 @@
     </v-navigation-drawer>
   </div>
 </template>
+
 <script>
+import { mapGetters } from "vuex";
+import Tooltip from "../shared/Tooltip";
+
 export default {
   name: "NavBar",
+  components: { Tooltip },
   data() {
     return {
       items: [
@@ -90,5 +116,36 @@ export default {
       console.log("deslogando");
     },
   },
+  computed: {
+    ...mapGetters({
+      logged: "logged",
+    }),
+  },
 };
 </script>
+
+<style scoped>
+.area-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.area-login__icon {
+  padding: 5px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+p.tooltip-paragrafo {
+  margin-bottom: 0;
+  text-align: center;
+}
+.login-tooltip {
+  width: 100%;
+}
+.login-tooltip__cadastro,
+.login-tooltip__btn,
+.login-tooltip__titulo {
+  margin: 1rem;
+}
+</style>
