@@ -72,7 +72,6 @@ export default {
 
 <style scoped>
 .section-historia {
-  width: 100%;
   margin-top: 15rem;
   margin-left: 3rem;
 }
