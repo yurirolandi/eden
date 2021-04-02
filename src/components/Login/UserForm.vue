@@ -4,7 +4,7 @@
       v-model="id"
       :rules="idRules"
       :counter="10"
-      label="Id"
+      label="Login"
       required
     ></v-text-field>
 
