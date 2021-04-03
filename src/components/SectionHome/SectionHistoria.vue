@@ -3,14 +3,7 @@
     <v-container>
       <v-row>
         <v-col>
-          <h1 class="titulo">História</h1>
-        </v-col>
-        <v-col>
-          <h1 class="titulo">Fotos</h1>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
+          <h1 class="titulo mb-5">História</h1>
           <p class="text-justify paragrafo">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -31,8 +24,8 @@
             hidden in the middle of text.
           </p>
         </v-col>
-
         <v-col>
+          <h1 class="titulo mb-5">Fotos</h1>
           <v-carousel hide-delimiters>
             <v-carousel-item
               v-for="(item, i) in items"
@@ -72,8 +65,8 @@ export default {
 
 <style scoped>
 .section-historia {
-  margin-top: 15rem;
-  margin-left: 3rem;
+  width: 100%;
+  margin: 18rem 3rem;
 }
 
 .titulo {
@@ -90,6 +83,7 @@ export default {
   margin-left: 18rem;
 }
 .v-window.v-item-group.theme--dark.v-carousel {
-    width: 800px;
+  width: 800px;
+  height: 400px !important;
 }
 </style>

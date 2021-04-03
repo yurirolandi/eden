@@ -49,7 +49,9 @@ export default {
   width: 100%;
   max-width: 50rem;
   margin-top: 15rem;
-  margin-left: 12rem;
+  margin-right: 59rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .titulo {
@@ -61,7 +63,7 @@ export default {
   letter-spacing: 2px;
 }
 
-.assinatura-logo{
+.assinatura-logo {
   width: 29rem;
   margin-left: 18rem;
 }

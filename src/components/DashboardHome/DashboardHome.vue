@@ -4,6 +4,7 @@
       <v-slide-item v-for="(grau, i) in colunas" :key="i">
         <v-card
           class="ma-3"
+          :class="{gradiente : grau.title === 'Coluna 12'}"
           height="300"
           width="400"
           :color="grau.backgroundColor"
@@ -242,12 +243,26 @@ export default {
   background-color: #4a005a;
 }
 .grau2 {
-  background-color: #4a005a;
+  background-color: #b200db;
 }
 .grau1 {
-  background-color: #4a005a;
+  background-color: #d400f5;
 }
 .mx-auto.mt-5.v-sheet.theme--light.elevation-3 {
   border-radius: 8px;
+}
+
+.ma-3.v-card.v-sheet.theme--light {
+    border-radius: 10px;
+}
+
+.gradiente {
+  background: rgb(78, 0, 95);
+  background: linear-gradient(
+    0deg,
+    rgba(78, 0, 95, 1) 0%,
+    rgba(131, 0, 161, 1) 22%,
+    rgba(187, 0, 229, 1) 78%
+  );
 }
 </style>

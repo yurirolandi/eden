@@ -3,11 +3,7 @@
     <v-container>
       <v-row>
         <v-col>
-          <h1 class="titulo">História</h1>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
+          <h1 class="titulo mb-5">História</h1>
           <p class="text-justify paragrafo">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -47,6 +43,9 @@ export default {
 </script>
 
 <style scoped>
+.section-grau{
+  margin-top: 2rem;
+}
 .titulo {
   color: #d4aa06;
 }
