@@ -105,7 +105,7 @@ export default {
       console.log("deslogando");
     },
     home() {
-      if (this.$route.path !== '/') {
+      if (this.$route.path !== "/") {
         this.$router.push("/");
       }
     },
@@ -158,5 +158,12 @@ p.tooltip-paragrafo {
 .img-logo {
   width: 200px;
   height: 150px;
+}
+
+@media only screen and (max-width: 414px) {
+  .img-logo {
+    width: 170px;
+    height: 120px;
+  }
 }
 </style>

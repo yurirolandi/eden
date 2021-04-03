@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .section-historia {
   width: 100%;
-  margin: 15rem 3rem;
+  margin: 10rem 3rem;
 }
 
 .titulo {

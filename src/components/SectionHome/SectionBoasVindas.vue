@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .section-wellcome {
   width: 100%;
-  margin: 15rem 3rem;
+  margin: 10rem 3rem;
 }
 
 .titulo {
@@ -60,7 +60,7 @@ export default {
 }
 
 .bloco__texto {
-  width: 30vw;
+  width: 55vw;
 }
 
 @media only screen and (max-width: 450px) {
