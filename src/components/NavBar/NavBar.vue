@@ -154,6 +154,11 @@ p.tooltip-paragrafo {
   margin-top: 5rem;
   justify-content: center;
   cursor: pointer;
+  transition: 1s ease;
+}
+
+.logo:hover {
+  transform: scale(1.3);
 }
 .img-logo {
   width: 200px;
