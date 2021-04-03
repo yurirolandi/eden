@@ -1,12 +1,12 @@
 <template>
-  <v-sheet class="mx-auto mt-5" elevation="3">
+  <v-sheet class="mx-auto mt-5" elevation="3" max-width="990">
     <v-slide-group v-model="model" class="pa-4" show-arrows>
       <v-slide-item v-for="(grau, i) in colunas" :key="i">
         <v-card
-          class="ma-3"
+          class="ma-2"
           :class="{gradiente : grau.title === 'Coluna 12'}"
           height="300"
-          width="400"
+          width="200"
           :color="grau.backgroundColor"
         >
           <v-list-item three-line>
@@ -212,7 +212,7 @@ export default {
 
 .grau-title {
   font-family: elementary;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: white;
 }
 .grau-subtitle {
@@ -224,7 +224,7 @@ export default {
 }
 .header {
   width: 100%;
-  height: 70px;
+  height: 50px;
   margin: 0.5rem 0rem;
   text-align: center;
 }
@@ -265,4 +265,25 @@ export default {
     rgba(187, 0, 229, 1) 78%
   );
 }
+
+
+@media only screen and (max-width: 820px) {
+  .v-sheet {
+    max-width: 500px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .v-sheet {
+    max-width: 340px !important;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .v-sheet {
+    max-width: 300px !important;
+  }
+}
+
+
 </style>

@@ -25,11 +25,8 @@
           </p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col>
-          <ColumGrau />
-        </v-col>
-      </v-row>
+
+      <ColumGrau />
     </v-container>
   </div>
 </template>
@@ -43,8 +40,8 @@ export default {
 </script>
 
 <style scoped>
-.section-grau{
-  margin-top: 2rem;
+.section-grau {
+  margin-top: 1rem;
 }
 .titulo {
   color: #d4aa06;
