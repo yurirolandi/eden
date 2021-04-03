@@ -30,6 +30,18 @@ export default {
   -moz-box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 4px 6px 20px -2px rgba(0, 0, 0, 0.75);
 }
+
+@media only screen and (max-width: 414px) {
+  .container {
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .create-account {
+    padding: 5rem 0;
+  }
+}
 .titulo {
   letter-spacing: 3px;
 }

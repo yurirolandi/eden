@@ -32,13 +32,19 @@ export default {
   justify-content: center;
 }
 
+@media only screen and (max-width: 414px) {
+  .login {
+   padding: 5rem 0;
+  }
+}
+
 .subtitulo {
   font-family: elementary;
 }
 .container {
   border-radius: 20px;
   padding: 1.5rem 3rem;
-  height: 48vh;
+  
   max-width: 60vh;
   background: white;
   flex-direction: column;
