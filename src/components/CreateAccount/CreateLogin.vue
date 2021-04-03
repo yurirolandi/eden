@@ -1,6 +1,6 @@
 <template>
   <div class="create-account">
-    <div class="container lighten-5 mt-10">
+    <div class="container lighten-5">
       <h2 class="mb-2 text-center titulo">Formulário do Candidato</h2>
       <CreateForm />
     </div>
@@ -19,6 +19,8 @@ export default {
 .create-account {
   display: flex;
   justify-content: center;
+  height: 100%;
+  padding: 8rem 0;
 }
 .container {
   border-radius: 20px;

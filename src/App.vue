@@ -5,17 +5,20 @@
     <v-main>
       <router-view />
     </v-main>
+
+    <Footer />
   </v-app>
 </template>
 
 <script>
 import NavBar from "./components/NavBar/NavBar";
-
+import Footer from "./components/Footer/Footer";
 export default {
   name: "App",
 
   components: {
     NavBar,
+    Footer,
   },
 };
 </script>
@@ -35,5 +38,4 @@ export default {
   font-size: 1.6rem;
   font-family: elementary;
 }
-
 </style>
