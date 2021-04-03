@@ -34,7 +34,7 @@ export default {
 
 @media only screen and (max-width: 414px) {
   .login {
-   padding: 5rem 0;
+    padding: 5rem 0;
   }
 }
 
@@ -44,7 +44,7 @@ export default {
 .container {
   border-radius: 20px;
   padding: 1.5rem 3rem;
-  
+
   max-width: 60vh;
   background: white;
   flex-direction: column;

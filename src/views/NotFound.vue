@@ -1,20 +1,7 @@
 <template>
- <v-sheet
-    class="mx-auto"
-    elevation="8"
-    max-width="800"
-  >
-    <v-slide-group
-      v-model="model"
-      class="pa-4"
-      center-active
-      show-arrows
-    >
-      <v-slide-item
-        v-for="n in 15"
-        :key="n"
-        v-slot="{ active, toggle }"
-      >
+  <v-sheet class="mx-auto" elevation="8" max-width="800">
+    <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
+      <v-slide-item v-for="n in 15" :key="n" v-slot="{ active, toggle }">
         <v-card
           :color="active ? 'primary' : 'grey lighten-1'"
           class="ma-4"
@@ -22,11 +9,7 @@
           width="200"
           @click="toggle"
         >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
+          <v-row class="fill-height" align="center" justify="center">
             <v-scale-transition>
               <v-icon
                 v-if="active"
@@ -43,9 +26,9 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      model: null,
-    }),
-  }
+export default {
+  data: () => ({
+    model: null,
+  }),
+};
 </script>

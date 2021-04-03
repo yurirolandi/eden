@@ -14,7 +14,9 @@
 
         <p class="mt-6 subtitulo text-center">Ainda não sou membro ?</p>
         <div class="mt-8 auto">
-          <v-btn :to="'/create-account'" color="black" text >Candidatar-se</v-btn>
+          <v-btn :to="'/create-account'" color="black" text
+            >Candidatar-se</v-btn
+          >
         </div>
       </v-card-text>
 

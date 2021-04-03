@@ -1,10 +1,10 @@
 <template>
-  <v-sheet class="mx-auto mt-5" elevation="3" max-width="990">
+  <v-sheet class="mx-auto mt-5" elevation="3">
     <v-slide-group v-model="model" class="pa-4" show-arrows>
       <v-slide-item v-for="(grau, i) in colunas" :key="i">
         <v-card
           class="ma-2"
-          :class="{gradiente : grau.title === 'Coluna 12'}"
+          :class="{ gradiente: grau.title === 'Coluna 12' }"
           height="300"
           width="200"
           :color="grau.backgroundColor"
@@ -253,7 +253,7 @@ export default {
 }
 
 .ma-3.v-card.v-sheet.theme--light {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .gradiente {
@@ -265,7 +265,6 @@ export default {
     rgba(187, 0, 229, 1) 78%
   );
 }
-
 
 @media only screen and (max-width: 820px) {
   .v-sheet {
@@ -284,6 +283,4 @@ export default {
     max-width: 300px !important;
   }
 }
-
-
 </style>

@@ -79,9 +79,7 @@ export default {
     ],
     religiaoRules: [
       (n) => !!n || "Texto obrigatório!!!",
-      (n) =>
-        (n && n.length <= 200) ||
-        "Texto deve conter 200 digitos",
+      (n) => (n && n.length <= 200) || "Texto deve conter 200 digitos",
     ],
     select: null,
     selectReligiao: null,
