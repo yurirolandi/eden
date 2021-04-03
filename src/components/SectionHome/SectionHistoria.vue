@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .section-historia {
   width: 100%;
-  margin: 10rem 3rem;
+  margin: 6rem 3rem;
 }
 
 .titulo {
@@ -83,7 +83,12 @@ export default {
   margin-left: 18rem;
 }
 .v-window.v-item-group.theme--dark.v-carousel {
-  width: 800px;
+  width: 45vh;
   height: 400px !important;
+}
+@media only screen and (max-width: 414px) {
+  .v-window.v-item-group.theme--dark.v-carousel {
+    width: 100%;
+  }
 }
 </style>

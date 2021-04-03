@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .section-wellcome {
   width: 100%;
-  margin: 10rem 3rem;
+  margin: 6rem 3rem;
 }
 
 .titulo {
