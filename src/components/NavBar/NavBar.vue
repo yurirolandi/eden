@@ -148,6 +148,8 @@ p.tooltip-paragrafo {
 }
 .redondo {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .logo {
   display: flex;
@@ -155,6 +157,7 @@ p.tooltip-paragrafo {
   justify-content: center;
   cursor: pointer;
   transition: 1s ease;
+  width: 200px;
 }
 
 .logo:hover {
