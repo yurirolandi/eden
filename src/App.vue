@@ -38,4 +38,18 @@ export default {
   font-size: 1.6rem;
   font-family: elementary;
 }
+
+.bloco__texto {
+  width: 100%;
+}
+
+.section__bloco {
+  width: 49vh;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>
