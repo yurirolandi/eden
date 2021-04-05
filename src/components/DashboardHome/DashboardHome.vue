@@ -1,6 +1,6 @@
 <template>
-  <v-sheet class="mx-auto mt-5" elevation="3">
-    <v-slide-group v-model="model" class="pa-4" show-arrows>
+  <v-sheet class="mx-auto sm mt-5" elevation="3">
+    <v-slide-group v-model="model" class="pa-4" show-arrows center-active>
       <v-slide-item v-for="(grau, i) in colunas" :key="i">
         <v-card
           class="ma-2"
@@ -81,108 +81,108 @@ export default {
       colunas: [
         {
           title: "Coluna 1",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "FRUTO DA VIDA",
+          grau2: "NASCIDO DA CARNE",
+          grau1: "FILHO DA TERRA",
           subtitle: "1° a 3° grau",
           color: "#cc0000",
           backgroundColor: "#ff0000",
         },
         {
           title: "Coluna 2",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "DESPERTAR INTERIOR",
+          grau2: "SER INFERIOR",
+          grau1: "CONCEPÇÃO DA ALMA",
           subtitle: "1° a 3° grau",
           color: "#ff6600",
           backgroundColor: "#ff7f2a",
         },
         {
           title: "Coluna 3",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "ÂMAGO DO EGO",
+          grau2: "RITO DE PASSAGEM",
+          grau1: "MESTRE ASCENSO",
           subtitle: "1° a 3° grau",
           color: "#dbd12b",
           backgroundColor: "#ffd42a",
         },
         {
           title: "Coluna 4",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau1: "DOMINIOS CELESTES",
+          grau2: "DEUSES CERIMONIAIS",
+          grau3: "YHWH",
           subtitle: "1° a 3° grau",
           color: "#005f00",
           backgroundColor: "#008000",
         },
         {
           title: "Coluna 5",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau1: "ÁGUAS DE BAIXO",
+          grau2: "ALTOS CÉUS",
+          grau3: "FILHOS DA ETERNIDADE",
           subtitle: "1° a 3° grau",
           color: "#0000ad",
           backgroundColor: "#0000ff",
         },
         {
           title: "Coluna 6",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "SIGILO FRATERNAL",
+          grau2: "IRMANDADE SAGRADA",
+          grau1: "CORRENTE DE UNIÃO",
           subtitle: "1° a 3° grau",
           color: "#0f0f36",
           backgroundColor: "#161650",
         },
         {
           title: "Coluna 7",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "ALIANÇA DE SANGUE",
+          grau2: "PACTO GNÓSTICOO",
+          grau1: "VOTO ETERNO",
           subtitle: "1° a 3° grau",
           color: "#563118",
           backgroundColor: "#784421",
         },
         {
           title: "Coluna 8",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "PENUMBRAL",
+          grau2: "MUNDO ANGÉLICO",
+          grau1: "SOMBAS CELESTES",
           subtitle: "1° a 3° grau",
           color: "#636363",
           backgroundColor: "#999999",
         },
         {
           title: "Coluna 9",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "MATERILIZAÇÃO",
+          grau2: "SIGILOS SAGRADOS",
+          grau1: "GOÉTIA",
           subtitle: "1° a 3° grau",
           color: "#2b2b2b",
           backgroundColor: "#000000",
         },
         {
           title: "Coluna 10",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "PURIFICAÇÃO DE GÊNERO",
+          grau2: "MAGIA SEXUAL",
+          grau1: "PACTO DE LIBAÇÃO",
           subtitle: "1° a 3° grau",
           color: "#a51597",
           backgroundColor: "#bd18ae",
         },
         {
           title: "Coluna 11",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "APOTEOSE",
+          grau2: "LUZ PERFEITA",
+          grau1: "ALIANÇA",
           subtitle: "1° a 3° grau",
           color: "#dcdcdc",
           backgroundColor: "#ffffff",
         },
         {
           title: "Coluna 12",
-          grau3: "Fruto da Vida",
-          grau2: "Nascido da Carne",
-          grau1: "Filho da Terra",
+          grau3: "SOBERANO GRÃO MESTRE DA ORDEM",
+          grau2: "ANJOS DO CONCERTO",
+          grau1: "MAGOS DO ORIENTE",
           subtitle: "1° a 3° grau",
           color: "#4a005a",
           backgroundColor: "#c800f5",
@@ -268,7 +268,7 @@ export default {
 
 @media only screen and (max-width: 820px) {
   .v-sheet {
-    max-width: 500px !important;
+    max-width: 100% !important;
   }
 }
 
