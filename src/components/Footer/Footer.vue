@@ -24,7 +24,7 @@
 
       <v-card-text class="black--text">
         {{ new Date().getFullYear() }} —
-        <strong>ESCOLA DE MISTÉRIOS PORTÔES DO ÉDEN</strong>
+        <strong>ESCOLA DE MISTÉRIOS PORTÕES DO ÉDEN</strong>
       </v-card-text>
     </v-card>
   </v-footer>
