@@ -2,9 +2,16 @@
   <v-footer dark padless>
     <v-card flat tile class="white lighten-1 text-center footer">
       <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4 black--text" icon>
+        <v-btn
+          v-for="(icon, i) in icons"
+          :key="i"
+          class="mx-4 black--text"
+          icon
+          :href="icon.link"
+          target="_blank"
+        >
           <v-icon size="24px">
-            {{ icon }}
+            {{ icon.icone }}
           </v-icon>
         </v-btn>
       </v-card-text>
@@ -33,7 +40,20 @@
 <script>
 export default {
   data: () => ({
-    icons: ["mdi-facebook", "mdi-instagram", "mdi-youtube"],
+    icons: [
+      {
+        icone: "mdi-facebook",
+        link: "https://www.facebook.com/",
+      },
+      {
+        icone: "mdi-instagram",
+        link: "https://www.instagram.com/",
+      },
+      {
+        icone: "mdi-youtube",
+        link: "https://www.youtube.com/",
+      },
+    ],
   }),
 };
 </script>
