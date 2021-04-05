@@ -1,9 +1,9 @@
 <template>
   <div class="section-historia">
-    <v-container>
-      <v-row>
-        <v-col>
-          <h1 class="titulo mb-5">História</h1>
+    <div class="section">
+      <div class="section__bloco">
+        <h1 class="titulo mb-5">História</h1>
+        <div class="bloco__texto">
           <p class="text-justify paragrafo">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -23,19 +23,19 @@
             Lorem Ipsum, you need to be sure there isn't anything embarrassing
             hidden in the middle of text.
           </p>
-        </v-col>
-        <v-col>
-          <h1 class="titulo mb-5">Fotos</h1>
-          <v-carousel hide-delimiters>
-            <v-carousel-item
-              v-for="(item, i) in items"
-              :key="i"
-              :src="item.src"
-            ></v-carousel-item>
-          </v-carousel>
-        </v-col>
-      </v-row>
-    </v-container>
+        </div>
+      </div>
+      <div class="section__bloco">
+        <h1 class="titulo mb-5">Fotos</h1>
+        <v-carousel hide-delimiters>
+          <v-carousel-item
+            v-for="(item, i) in items"
+            :key="i"
+            :src="item.src"
+          ></v-carousel-item>
+        </v-carousel>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -66,7 +66,12 @@ export default {
 <style scoped>
 .section-historia {
   width: 100%;
-  margin: 6rem 3rem;
+  margin: 6rem 0rem;
+  display: flex;
+  align-content: center;
+}
+.section {
+  justify-content: space-between;
 }
 
 .titulo {
@@ -78,17 +83,29 @@ export default {
   letter-spacing: 2px;
 }
 
-.assinatura-logo {
-  width: 29rem;
-  margin-left: 18rem;
+.section__bloco {
+  width: 75vh;
 }
+
 .v-window.v-item-group.theme--dark.v-carousel {
-  width: 45vh;
   height: 400px !important;
 }
+
+
 @media only screen and (max-width: 414px) {
   .v-window.v-item-group.theme--dark.v-carousel {
     width: 100%;
+  }
+  .section__bloco {
+    width: 97%;
+    max-width: 97%
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .section__bloco {
+    min-width: 287px;
+    max-width: 97%
   }
 }
 </style>

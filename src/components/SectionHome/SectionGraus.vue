@@ -1,9 +1,9 @@
 <template>
   <div class="section-grau">
-    <v-container>
-      <v-row>
-        <v-col>
-          <h1 class="titulo mb-5">História</h1>
+    <div class="section">
+      <div class="section__bloco mr-8">
+        <h1 class="titulo mb-5">História</h1>
+        <div class="bloco__texto">
           <p class="text-justify paragrafo">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -23,11 +23,12 @@
             Lorem Ipsum, you need to be sure there isn't anything embarrassing
             hidden in the middle of text.
           </p>
-        </v-col>
-      </v-row>
-
-      <ColumGrau />
-    </v-container>
+        </div>
+      </div>
+      <div class="section__bloco">
+        <ColumGrau />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,7 +42,10 @@ export default {
 
 <style scoped>
 .section-grau {
-  margin-top: 1rem;
+  width: 100%;
+  margin: 6rem 0rem;
+  display: flex;
+  align-content: center;
 }
 .titulo {
   color: #d4aa06;
@@ -51,4 +55,24 @@ export default {
   font-size: 1rem;
   letter-spacing: 2px;
 }
+
+.section{
+  flex-direction: column;
+}
+
+.section__bloco{
+  width: 100%;
+}
+
+.bloco__texto{
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 414px) {
+  .section__bloco {
+    width: 97%;
+  }
+}
+
+
 </style>

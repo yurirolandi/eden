@@ -1,8 +1,10 @@
 <template>
   <div class="home">
-    <SectionBoasVindas />
-    <SectionHistoria />
-    <SectionGrau />
+    <div class="container">
+      <SectionBoasVindas />
+      <SectionHistoria />
+      <SectionGrau />
+    </div>
   </div>
 </template>
 
