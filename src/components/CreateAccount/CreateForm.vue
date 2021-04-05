@@ -1,6 +1,6 @@
 <template>
   <v-form ref="form" v-model="valid" lazy-validation>
-    <v-text-field v-model="name" label="Name" required></v-text-field>
+    <v-text-field v-model="name" label="Nome" required></v-text-field>
 
     <v-text-field
       v-model="email"
@@ -49,7 +49,7 @@
         (v) =>
           !!v || 'Para continuar você precisa aceitar os termos da escola!',
       ]"
-      label="Aceitar os termos?"
+      label="Aceitar os termos!"
       required
     ></v-checkbox>
 
