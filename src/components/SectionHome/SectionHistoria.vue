@@ -91,21 +91,20 @@ export default {
   height: 400px !important;
 }
 
-
 @media only screen and (max-width: 414px) {
   .v-window.v-item-group.theme--dark.v-carousel {
     width: 100%;
   }
   .section__bloco {
     width: 97%;
-    max-width: 97%
+    max-width: 97%;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .section__bloco {
     min-width: 287px;
-    max-width: 97%
+    max-width: 97%;
   }
 }
 </style>

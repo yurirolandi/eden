@@ -56,15 +56,15 @@ export default {
   letter-spacing: 2px;
 }
 
-.section{
+.section {
   flex-direction: column;
 }
 
-.section__bloco{
+.section__bloco {
   width: 100%;
 }
 
-.bloco__texto{
+.bloco__texto {
   max-width: 100%;
 }
 
@@ -73,6 +73,4 @@ export default {
     width: 97%;
   }
 }
-
-
 </style>
