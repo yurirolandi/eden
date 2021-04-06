@@ -15,7 +15,8 @@
       :counter="11"
       label="Telefone"
       required
-    ></v-text-field>
+    >
+    </v-text-field>
 
     <v-select
       v-model="select"
@@ -39,7 +40,7 @@
       label="O que é Religião"
       :rules="religiaoRules"
       v-model="religiaoOquee"
-      :counter="200"
+      counter
       required
     ></v-textarea>
 
@@ -79,7 +80,7 @@ export default {
     ],
     religiaoRules: [
       (n) => !!n || "Texto obrigatório!!!",
-      (n) => (n && n.length <= 200) || "Texto deve conter 200 digitos",
+      (n) => (n && n.length > 200) || "Texto deve conter no minimo 200 caracteres",
     ],
     select: null,
     selectReligiao: null,
