@@ -33,6 +33,7 @@
                     {{ grau.grau3 }}
                   </div>
                   <div
+                    v-if="grau.grau2"
                     class="grau-subtitle"
                     :class="{ grau2: grau.title === 'Coluna 12' }"
                     :style="{
@@ -44,6 +45,7 @@
                     {{ grau.grau2 }}
                   </div>
                   <div
+                    v-if="grau.grau1"
                     class="grau-subtitle"
                     :class="{ grau1: grau.title === 'Coluna 12' }"
                     :style="{
@@ -80,6 +82,13 @@ export default {
       model: null,
       colunas: [
         {
+          title: "NEÓFITO",
+          grau3: " NEÓFITO",
+          subtitle: "0° grau",
+          color: "#2b2b2b",
+          backgroundColor: "#000000",
+        },
+        {
           title: "Coluna 1",
           grau3: "FRUTO DA VIDA",
           grau2: "NASCIDO DA CARNE",
@@ -93,25 +102,25 @@ export default {
           grau3: "DESPERTAR INTERIOR",
           grau2: "SER INFERIOR",
           grau1: "CONCEPÇÃO DA ALMA",
-          subtitle: "1° a 3° grau",
+          subtitle: "4° a 6° grau",
           color: "#ff6600",
           backgroundColor: "#ff7f2a",
         },
         {
           title: "Coluna 3",
-          grau3: "ÂMAGO DO EGO",
+          grau3: "MESTRE ASCENSO",
           grau2: "RITO DE PASSAGEM",
-          grau1: "MESTRE ASCENSO",
-          subtitle: "1° a 3° grau",
+          grau1: "ÂMAGO DO EGO",
+          subtitle: "7° a 9° grau",
           color: "#dbd12b",
           backgroundColor: "#ffd42a",
         },
         {
           title: "Coluna 4",
-          grau1: "DOMINIOS CELESTES",
+          grau3: "DOMINIOS CELESTES",
           grau2: "DEUSES CERIMONIAIS",
-          grau3: "YHWH",
-          subtitle: "1° a 3° grau",
+          grau1: "YHWH",
+          subtitle: "10° a 12° grau",
           color: "#005f00",
           backgroundColor: "#008000",
         },
@@ -120,25 +129,25 @@ export default {
           grau1: "ÁGUAS DE BAIXO",
           grau2: "ALTOS CÉUS",
           grau3: "FILHOS DA ETERNIDADE",
-          subtitle: "1° a 3° grau",
+          subtitle: "13° a 15° grau",
           color: "#0000ad",
           backgroundColor: "#0000ff",
         },
         {
           title: "Coluna 6",
-          grau3: "SIGILO FRATERNAL",
+          grau3: "CORRENTE DE UNIÃO",
           grau2: "IRMANDADE SAGRADA",
-          grau1: "CORRENTE DE UNIÃO",
-          subtitle: "1° a 3° grau",
+          grau1: "SIGILO FRATERNAL",
+          subtitle: "16° a 18° grau",
           color: "#0f0f36",
           backgroundColor: "#161650",
         },
         {
           title: "Coluna 7",
-          grau3: "ALIANÇA DE SANGUE",
+          grau3: "VOTO ETERNO",
           grau2: "PACTO GNÓSTICOO",
-          grau1: "VOTO ETERNO",
-          subtitle: "1° a 3° grau",
+          grau1: "ALIANÇA DE SANGUE",
+          subtitle: "19° a 21° grau",
           color: "#563118",
           backgroundColor: "#784421",
         },
@@ -147,7 +156,7 @@ export default {
           grau3: "PENUMBRAL",
           grau2: "MUNDO ANGÉLICO",
           grau1: "SOMBAS CELESTES",
-          subtitle: "1° a 3° grau",
+          subtitle: "22° a 24° grau",
           color: "#636363",
           backgroundColor: "#999999",
         },
@@ -156,7 +165,7 @@ export default {
           grau3: "MATERILIZAÇÃO",
           grau2: "SIGILOS SAGRADOS",
           grau1: "GOÉTIA",
-          subtitle: "1° a 3° grau",
+          subtitle: "25° a 27° grau",
           color: "#2b2b2b",
           backgroundColor: "#000000",
         },
@@ -165,7 +174,7 @@ export default {
           grau3: "PURIFICAÇÃO DE GÊNERO",
           grau2: "MAGIA SEXUAL",
           grau1: "PACTO DE LIBAÇÃO",
-          subtitle: "1° a 3° grau",
+          subtitle: "28° a 30° grau",
           color: "#a51597",
           backgroundColor: "#bd18ae",
         },
@@ -174,7 +183,7 @@ export default {
           grau3: "APOTEOSE",
           grau2: "LUZ PERFEITA",
           grau1: "ALIANÇA",
-          subtitle: "1° a 3° grau",
+          subtitle: "31° a 33° grau",
           color: "#dcdcdc",
           backgroundColor: "#ffffff",
         },
@@ -183,7 +192,7 @@ export default {
           grau3: "SOBERANO GRÃO MESTRE DA ORDEM",
           grau2: "ANJOS DO CONCERTO",
           grau1: "MAGOS DO ORIENTE",
-          subtitle: "1° a 3° grau",
+          subtitle: "ALTOS GRAUS",
           color: "#4a005a",
           backgroundColor: "#c800f5",
         },
