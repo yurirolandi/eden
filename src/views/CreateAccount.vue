@@ -12,7 +12,7 @@ export default {
 </script>
 <style scoped>
 .create-login {
-  background-image: url("../assets/img/backsite.png");
+  background-image: url("../assets/img/backsite.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;

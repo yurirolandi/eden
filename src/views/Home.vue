@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .home {
-  background-image: url("../assets/img/backsite2.png");
+  background-image: url("../assets/img/backsite2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
