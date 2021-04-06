@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <div class="container">
+    <v-container>
       <SectionBoasVindas />
       <SectionHistoria />
       <SectionGrau />
-    </div>
+    </v-container>
   </div>
 </template>
 
@@ -31,11 +31,5 @@ export default {
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-.container {
-  width: 100%;
-  padding: 12px;
-  margin-right: auto;
-  margin-left: auto;
 }
 </style>
