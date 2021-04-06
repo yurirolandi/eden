@@ -32,4 +32,10 @@ export default {
   align-content: center;
   align-items: center;
 }
+.container {
+  width: 100%;
+  padding: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
 </style>
