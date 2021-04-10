@@ -27,7 +27,7 @@
       </div>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" fixed temporary>
+    <v-navigation-drawer v-if="logged" v-model="drawer" fixed temporary>
       <v-list-item>
         <v-list-item-avatar>
           <v-icon size="40">mdi-account-circle-outline</v-icon>
@@ -35,8 +35,7 @@
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title>{{logged.nome}}</v-list-item-title>
-          <v-list-item-subtitle>Level</v-list-item-subtitle>
+          <v-list-item-title>{{ logged.nome }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
@@ -70,9 +69,7 @@
 
           <v-list-item-content>
             <v-list-item-title
-              ><button @click.prevent="logout">
-                Sair
-              </button></v-list-item-title
+              ><button @click.prevent="logout">Sair</button></v-list-item-title
             >
           </v-list-item-content>
         </v-list-item>
