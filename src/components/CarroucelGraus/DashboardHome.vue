@@ -1,6 +1,12 @@
 <template>
   <v-sheet class="mx-auto sm mt-5" elevation="3">
-    <v-slide-group v-model="model" class="pa-4" show-arrows center-active>
+    <v-slide-group
+      v-if="colunas"
+      v-model="model"
+      class="pa-4"
+      show-arrows
+      center-active
+    >
       <v-slide-item v-for="(grau, i) in colunas" :key="i">
         <v-card
           class="ma-2"
@@ -71,138 +77,30 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
+    <div v-else class="pa-5 text-center">
+      <v-progress-circular
+        class="pa-5 text-center"
+        indeterminate
+        color="black"
+      ></v-progress-circular>
+    </div>
   </v-sheet>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "ColumGrau",
   data() {
     return {
       model: null,
-      colunas: [
-        {
-          title: "NEÓFITO",
-          grau3: " NEÓFITO",
-          subtitle: "0° grau",
-          color: "#2b2b2b",
-          backgroundColor: "#000000",
-        },
-        {
-          title: "Coluna 1",
-          grau3: "FRUTO DA VIDA",
-          grau2: "NASCIDO DA CARNE",
-          grau1: "FILHO DA TERRA",
-          subtitle: "1° a 3° grau",
-          color: "#cc0000",
-          backgroundColor: "#ff0000",
-        },
-        {
-          title: "Coluna 2",
-          grau3: "DESPERTAR INTERIOR",
-          grau2: "SER INFERIOR",
-          grau1: "CONCEPÇÃO DA ALMA",
-          subtitle: "4° a 6° grau",
-          color: "#ff6600",
-          backgroundColor: "#ff7f2a",
-        },
-        {
-          title: "Coluna 3",
-          grau3: "MESTRE ASCENSO",
-          grau2: "RITO DE PASSAGEM",
-          grau1: "ÂMAGO DO EGO",
-          subtitle: "7° a 9° grau",
-          color: "#dbd12b",
-          backgroundColor: "#ffd42a",
-        },
-        {
-          title: "Coluna 4",
-          grau3: "DOMINIOS CELESTES",
-          grau2: "DEUSES CERIMONIAIS",
-          grau1: "YHWH",
-          subtitle: "10° a 12° grau",
-          color: "#005f00",
-          backgroundColor: "#008000",
-        },
-        {
-          title: "Coluna 5",
-          grau1: "ÁGUAS DE BAIXO",
-          grau2: "ALTOS CÉUS",
-          grau3: "FILHOS DA ETERNIDADE",
-          subtitle: "13° a 15° grau",
-          color: "#0000ad",
-          backgroundColor: "#0000ff",
-        },
-        {
-          title: "Coluna 6",
-          grau3: "CORRENTE DE UNIÃO",
-          grau2: "IRMANDADE SAGRADA",
-          grau1: "SIGILO FRATERNAL",
-          subtitle: "16° a 18° grau",
-          color: "#0f0f36",
-          backgroundColor: "#161650",
-        },
-        {
-          title: "Coluna 7",
-          grau3: "VOTO ETERNO",
-          grau2: "PACTO GNÓSTICOO",
-          grau1: "ALIANÇA DE SANGUE",
-          subtitle: "19° a 21° grau",
-          color: "#563118",
-          backgroundColor: "#784421",
-        },
-        {
-          title: "Coluna 8",
-          grau3: "PENUMBRAL",
-          grau2: "MUNDO ANGÉLICO",
-          grau1: "SOMBAS CELESTES",
-          subtitle: "22° a 24° grau",
-          color: "#636363",
-          backgroundColor: "#999999",
-        },
-        {
-          title: "Coluna 9",
-          grau3: "MATERILIZAÇÃO",
-          grau2: "SIGILOS SAGRADOS",
-          grau1: "GOÉTIA",
-          subtitle: "25° a 27° grau",
-          color: "#2b2b2b",
-          backgroundColor: "#000000",
-        },
-        {
-          title: "Coluna 10",
-          grau3: "PURIFICAÇÃO DE GÊNERO",
-          grau2: "MAGIA SEXUAL",
-          grau1: "PACTO DE LIBAÇÃO",
-          subtitle: "28° a 30° grau",
-          color: "#a51597",
-          backgroundColor: "#bd18ae",
-        },
-        {
-          title: "Coluna 11",
-          grau3: "APOTEOSE",
-          grau2: "LUZ PERFEITA",
-          grau1: "ALIANÇA",
-          subtitle: "31° a 33° grau",
-          color: "#dcdcdc",
-          backgroundColor: "#ffffff",
-        },
-        {
-          title: "Coluna 12",
-          grau3: "SOBERANO GRÃO MESTRE DA ORDEM",
-          grau2: "ANJOS DO CONCERTO",
-          grau1: "MAGOS DO ORIENTE",
-          subtitle: "ALTOS GRAUS",
-          color: "#4a005a",
-          backgroundColor: "#c800f5",
-        },
-      ],
     };
   },
-  methods: {
-    teste() {
-      console.log("active");
-    },
+ 
+  computed: {
+    ...mapGetters({
+      colunas: "getColunas",
+    }),
   },
 };
 </script>
