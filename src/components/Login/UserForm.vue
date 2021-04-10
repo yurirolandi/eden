@@ -50,7 +50,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(['setUser']),
+    ...mapMutations(["setUser"]),
     async validate() {
       if (this.$refs.form.validate()) {
         const user = {
@@ -62,13 +62,14 @@ export default {
         const userLogged = {
           nome: response.data.user.nome,
           email: response.data.user.email,
-        }
+          acesso: response.data.user.acesso,
+        };
 
         if (response) {
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("User", JSON.stringify(userLogged));
-           this.setUser(userLogged);
-          this.$router.push({ path: '/home-user' })
+          this.setUser(userLogged);
+          this.$router.push({ path: "/home-user" });
         }
 
         (this.id = ""), (this.password = "");
