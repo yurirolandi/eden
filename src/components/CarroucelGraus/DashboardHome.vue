@@ -8,9 +8,13 @@
       center-active
     >
       <v-slide-item v-for="(grau, i) in colunas" :key="i">
+        
         <v-card
           class="ma-2"
-          :class="{ gradiente: grau.title === 'Coluna 12' }"
+          :class="{
+            gradiente: grau.title === 'Coluna 12',
+            disabledGrau: logado && logado.acesso < grau.acesso,
+          }"
           height="300"
           width="200"
           :color="grau.backgroundColor"
@@ -96,10 +100,11 @@ export default {
       model: null,
     };
   },
- 
+
   computed: {
     ...mapGetters({
       colunas: "getColunas",
+      logado: "getLogged",
     }),
   },
 };
@@ -115,6 +120,11 @@ export default {
 }
 .v-list-item__subtitle {
   height: 9rem;
+}
+
+.disabledGrau{
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .grau-title {
