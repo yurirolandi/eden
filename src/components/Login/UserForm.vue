@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { requestAxios } from "../../server/axios";
+import { mapMutations } from "vuex";
 export default {
   data() {
     return {
@@ -36,23 +38,41 @@ export default {
       password: "",
       passwordRules: [
         (v) => !!v || "A senha é obrigatorio!!!",
-        (v) => (v && v.length <= 10) || "Senha deve ter 10 caracter",
+        // (v) => (v && v.length <= 10) || "Senha deve ter 10 caracter",
       ],
       id: "",
       idRules: [
         (v) => !!v || "Id é obrigatorio!!!",
-        (v) => (v && v.length <= 10) || "Id deve ter 10 caracter",
+        // (v) => (v && v.length <= 10) || "Id deve ter 10 caracter",
         // (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
       ],
     };
   },
 
   methods: {
-    validate() {
-      this.$refs.form.validate();
-      console.log("tudo certo!!!");
-      this.password = "";
-      this.id = "";
+    ...mapMutations(['setUser']),
+    async validate() {
+      if (this.$refs.form.validate()) {
+        const user = {
+          email: this.id,
+          password: this.password,
+        };
+        const response = await requestAxios.post("/api/autenticate", user);
+
+        const userLogged = {
+          nome: response.data.user.nome,
+          email: response.data.user.email,
+        }
+
+        if (response) {
+          localStorage.setItem("token", response.data.token);
+          localStorage.setItem("User", JSON.stringify(userLogged));
+           this.setUser(userLogged);
+          this.$router.push({ path: '/create-account' })
+        }
+
+        (this.id = ""), (this.password = "");
+      }
     },
   },
 };
