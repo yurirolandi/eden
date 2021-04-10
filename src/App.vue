@@ -14,7 +14,7 @@
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { requestAxios } from "./server/axios";
-import { mapMutations } from "vuex";
+import { mapMutations, mapActions } from "vuex";
 export default {
   name: "App",
 
@@ -28,8 +28,10 @@ export default {
       validationToken: true,
     };
   },
+
   methods: {
     ...mapMutations(["setUser"]),
+    ...mapActions(["getColunas"]),
     async validateToken() {
       this.validatingToken = true;
       const json = localStorage.getItem("User");
@@ -60,6 +62,7 @@ export default {
 
   created() {
     this.validateToken();
+    this.getColunas();
   },
 };
 </script>
