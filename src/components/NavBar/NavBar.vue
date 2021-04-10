@@ -90,11 +90,11 @@ export default {
     return {
       items: [
         { title: "Inicio", icon: "mdi-view-dashboard", route: "/home-user" },
-        { title: "Estudos", icon: "mdi-school", route: "/notfound" },
-        { title: "Historia", icon: "mdi-book", route: "/notfound" },
-        { title: "Escola", icon: "mdi-school", route: "/notfound" },
-        { title: "Imagens", icon: "mdi-image", route: "/notfound" },
-        { title: "Orações", icon: "mdi-hand-heart", route: "/notfound" },
+        { title: "Estudos", icon: "mdi-school", route: "/notfound1" },
+        { title: "Historia", icon: "mdi-book", route: "/notfound2" },
+        { title: "Escola", icon: "mdi-school", route: "/notfound3" },
+        { title: "Imagens", icon: "mdi-image", route: "/notfound4" },
+        { title: "Orações", icon: "mdi-hand-heart", route: "/notfound5" },
       ],
       drawer: false,
     };
