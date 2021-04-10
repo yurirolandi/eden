@@ -13,12 +13,53 @@
 <script>
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import { requestAxios } from "./server/axios";
+import {  mapMutations } from "vuex";
 export default {
   name: "App",
 
   components: {
     NavBar,
     Footer,
+  },
+
+  data() {
+    return {
+      validationToken: true,
+    };
+  },
+  methods: {
+    ...mapMutations(['setUser']),
+    async validateToken() {
+      this.validatingToken = true;
+      const json = localStorage.getItem("User");
+      const userData = JSON.parse(json);
+      this.setUser('');
+
+      if (!userData) {
+        this.validatingToken = false;
+        if (this.$router.options.base === "/") return;
+        this.$router.push({ path: "/" });
+      }
+
+      const response = await requestAxios.get("/api/login", {
+        params: {
+          email: userData.email,
+        },
+      });
+      if (response.data) {
+       this.setUser(userData);
+      } else {
+        localStorage.removeItem("User");
+        this.$router.push({ path: "/" });
+      }
+
+      this.validatingToken = false;
+    },
+  },
+
+  created() {
+    this.validateToken();
   },
 };
 </script>
