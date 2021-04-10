@@ -1,5 +1,7 @@
 <template>
-        <h1>Pagina de usuario logado</h1>
+       <div class="home">
+
+       </div>
 </template>
 <script>
 export default {

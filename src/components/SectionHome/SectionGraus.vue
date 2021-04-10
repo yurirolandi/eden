@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import ColumGrau from "../DashboardHome/DashboardHome";
+import ColumGrau from "../CarroucelGraus/DashboardHome";
 export default {
   name: "SectionGrau",
   components: { ColumGrau },
