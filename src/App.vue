@@ -14,7 +14,7 @@
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { requestAxios } from "./server/axios";
-import {  mapMutations } from "vuex";
+import { mapMutations } from "vuex";
 export default {
   name: "App",
 
@@ -29,12 +29,12 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['setUser']),
+    ...mapMutations(["setUser"]),
     async validateToken() {
       this.validatingToken = true;
       const json = localStorage.getItem("User");
       const userData = JSON.parse(json);
-      this.setUser('');
+      this.setUser("");
 
       if (!userData) {
         this.validatingToken = false;
@@ -48,7 +48,7 @@ export default {
         },
       });
       if (response.data) {
-       this.setUser(userData);
+        this.setUser(userData);
       } else {
         localStorage.removeItem("User");
         this.$router.push({ path: "/" });
@@ -92,5 +92,19 @@ export default {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.home {
+  background-image: url("./assets/img/backsite2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 80vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 </style>

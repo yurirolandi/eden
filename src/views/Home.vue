@@ -18,18 +18,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.home {
-  background-image: url("../assets/img/backsite2.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-</style>
