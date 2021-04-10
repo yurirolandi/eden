@@ -3,10 +3,6 @@
     <v-app-bar app color="white">
       <div class="d-flex align-center">
         <v-app-bar-nav-icon v-if="logged" @click="toggleMenu" />
-
-        <!-- <div class="nav-bar__logo">
-          <v-btn :to="'/'" text>Portões do Eden</v-btn>
-        </div> -->
       </div>
 
       <div class="redondo">
@@ -23,20 +19,23 @@
 
       <div
         class="area-login"
-        v-if="$route.name !== 'Login' && $route.name !== 'CreateAccount'"
+        v-if="
+          $route.name !== 'Login' && $route.name !== 'CreateAccount' && !logged
+        "
       >
         <v-btn :to="'/login'" class="btn">Login</v-btn>
       </div>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list-item>
         <v-list-item-avatar>
-          <v-img src="../../assets/logo.png"></v-img>
+          <v-icon size="40">mdi-account-circle-outline</v-icon>
+          <!-- <v-img src="../../assets/logo.png"></v-img> -->
         </v-list-item-avatar>
 
         <v-list-item-content>
-          <v-list-item-title>Nome</v-list-item-title>
+          <v-list-item-title>{{logged.nome}}</v-list-item-title>
           <v-list-item-subtitle>Level</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -72,7 +71,7 @@
           <v-list-item-content>
             <v-list-item-title
               ><button @click.prevent="logout">
-                Logout
+                Sair
               </button></v-list-item-title
             >
           </v-list-item-content>
@@ -83,26 +82,37 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "NavBar",
   data() {
     return {
       items: [
-        { title: "Home", icon: "mdi-view-dashboard", route: "/" },
-        // { title: "Login", icon: "mdi-login", route: "/login" },
-        // { title: "About", icon: "mdi-forum", route: "/tools" },
+        { title: "Inicio", icon: "mdi-view-dashboard", route: "/home-user" },
+        { title: "Estudos", icon: "mdi-school", route: "/notfound" },
+        { title: "Historia", icon: "mdi-book", route: "/notfound" },
+        { title: "Escola", icon: "mdi-school", route: "/notfound" },
+        { title: "Imagens", icon: "mdi-image", route: "/notfound" },
+        { title: "Orações", icon: "mdi-hand-heart", route: "/notfound" },
       ],
       drawer: false,
     };
   },
   methods: {
+    ...mapMutations(["setUser"]),
     toggleMenu() {
       this.drawer = !this.drawer;
     },
     logout() {
-      console.log("deslogando");
+      const token = localStorage.getItem("token");
+      const user = localStorage.getItem("User");
+      if (token && user) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("User");
+        this.setUser(null);
+        return this.$router.push({ path: "/" });
+      }
     },
     home() {
       if (this.$route.path !== "/") {
@@ -112,7 +122,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      logged: "logged",
+      logged: "getLogged",
     }),
   },
 };
@@ -157,15 +167,15 @@ p.tooltip-paragrafo {
   justify-content: center;
   cursor: pointer;
   transition: 1s ease;
-  width: 200px;
+  width: 150px;
 }
 
 .logo:hover {
   transform: scale(1.3);
 }
 .img-logo {
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 414px) {
