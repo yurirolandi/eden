@@ -16,7 +16,7 @@ export default {
                 }).catch(error => console.log('houve um erro na requisição', error))
 
             } catch (error) {
-                console.log(error, 'houve um erro ao tentar obter dados de getProducts')
+                console.log(error, 'houve um erro ao tentar obter dados de getColuna')
             }
         }
     },
