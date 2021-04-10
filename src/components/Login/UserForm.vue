@@ -68,7 +68,7 @@ export default {
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("User", JSON.stringify(userLogged));
            this.setUser(userLogged);
-          this.$router.push({ path: '/create-account' })
+          this.$router.push({ path: '/home-user' })
         }
 
         (this.id = ""), (this.password = "");
