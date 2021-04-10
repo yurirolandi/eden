@@ -1,12 +1,24 @@
+import { requestAxios } from '../../server/axios';
 export default {
   state: {
-    login: false,
+    user: null,
+    token: localStorage.getItem('token') || null
   },
-  mutations: {},
+  mutations: {
+    setUser(state, payload) {
+      state.user = payload;
+      if (payload) {
+        requestAxios.defaults.headers.common.Authorization = `Bearer ${state.token}`
+      }
+    },
+    loggedIn(state) {
+      return state.token !== null;
+    },
+  },
   actions: {},
   getters: {
-    logged(state) {
-      return state.login;
+    getLogged(state) {
+      return state.user;
     },
   },
 };
